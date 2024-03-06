@@ -45,6 +45,8 @@ dependencies:
   # modules
   fiesta_system: 
     path: ../modules/fiesta
+  cache_module:
+    path: ../modules/cache_module
 
 dev_dependencies:
   flutter_test:

@@ -3,14 +3,15 @@ import 'dart:collection';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:cache_module/cache_module.dart';
 import 'package:flutter/foundation.dart';
-import 'package:games_plus/cache/game_cache.dart';
 
 import 'package:http/http.dart' as http;
 
-import 'package:games_plus/constants.dart';
 import 'package:games_plus/models/comment.dart';
 import 'package:games_plus/models/game.dart';
+
+const baseApi = 'https://63f7ba5c833c7c9c608a51a6.mockapi.io/api';
 
 class GameRepository extends ChangeNotifier {
   final List<Game> _games = [];
