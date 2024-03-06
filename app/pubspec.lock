@@ -107,7 +107,7 @@ packages:
   fiesta_system:
     dependency: "direct main"
     description:
-      path: "../modules/fiesta"
+      path: "../modules/fiesta_module"
       relative: true
     source: path
     version: "0.0.1"

@@ -44,7 +44,7 @@ dependencies:
 
   # modules
   fiesta_system: 
-    path: ../modules/fiesta
+    path: ../modules/fiesta_module
   cache_module:
     path: ../modules/cache_module
 
