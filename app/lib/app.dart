@@ -1,7 +1,7 @@
 import 'package:fiesta_system/fiesta_system.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'pages/game_page.dart';
+import 'ui/game_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class App extends StatelessWidget {

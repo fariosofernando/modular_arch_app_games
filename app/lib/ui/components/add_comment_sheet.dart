@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/comment.dart';
-import '../models/game.dart';
-import '../repositories/game_repository.dart';
+import '../../models/comment.dart';
+import '../../models/game.dart';
+import '../../repositories/game_repository.dart';
 import 'package:provider/provider.dart';
 
 class AddCommentSheet extends StatefulWidget {

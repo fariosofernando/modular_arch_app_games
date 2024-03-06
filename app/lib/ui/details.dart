@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../models/game.dart';
 import '../repositories/game_repository.dart';
-import '../widgets/add_comment_sheet.dart';
+import 'components/add_comment_sheet.dart';
 import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 

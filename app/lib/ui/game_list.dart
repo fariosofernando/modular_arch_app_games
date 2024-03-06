@@ -1,10 +1,10 @@
 import 'package:fiesta_system/fiesta_system.dart';
 import 'package:flutter/material.dart';
 import '../models/game.dart';
-import 'game_details_page.dart';
+import 'details.dart';
 import '../repositories/game_repository.dart';
-import '../widgets/game_image_card.dart';
-import '../widgets/games_grid_view.dart';
+import 'components/game_image_card.dart';
+import 'components/games_grid_view.dart';
 import 'package:provider/provider.dart';
 
 class GamePage extends StatefulWidget {
