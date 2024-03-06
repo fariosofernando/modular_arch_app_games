@@ -1,16 +1,15 @@
+import 'package:fiesta_system/fiesta_system.dart';
 import 'package:flutter/material.dart';
+import 'package:games_plus/app.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
-// import 'package:games_plus/button_app.dart';
 
 import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
-import 'meu_aplicativo.dart';
 import 'repositories/game_repository.dart';
 
 void main() async {
-  // runApp(const ButtonApp());
+  WidgetsFlutterBinding.ensureInitialized();
   timeago.setLocaleMessages('pt_BR', timeago.PtBrShortMessages());
 
   await Hive.initFlutter();
@@ -18,28 +17,18 @@ void main() async {
     await Hive.openBox('game_cache');
   }
 
+  var box = await FiestaSystem.moduleInitializer();
+
   runApp(
     MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (_) => ThemeNotifier(box)),
+        
         ChangeNotifierProvider(
           create: (context) => GameRepository(),
         ),
       ],
-      child: const MeuAplicativo(),
+      child: const App(),
     ),
   );
-
-  // runApp(
-  //   Listener(
-  //     onPointerDown: (event) => debugPrint(event.toStringFull()),
-  //     child: MultiProvider(
-  //       providers: [
-  //         ChangeNotifierProvider(
-  //           create: (context) => GameRepository(),
-  //         ),
-  //       ],
-  //       child: const MeuAplicativo(),
-  //     ),
-  //   ),
-  // );
 }

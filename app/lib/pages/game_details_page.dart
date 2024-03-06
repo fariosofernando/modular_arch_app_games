@@ -10,9 +10,9 @@ class GameDetailsPage extends StatefulWidget {
   final Game game;
 
   const GameDetailsPage({
-    Key? key,
+    super.key,
     required this.game,
-  }) : super(key: key);
+  });
 
   @override
   State<GameDetailsPage> createState() => _GameDetailsPageState();
